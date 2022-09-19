@@ -3,23 +3,15 @@ import { api } from '../../utils/api/api';
 
 export function Form() {
   const [newTime, setNewTime] = useState();
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
 
-    // const times = {
-    //   name: event.target.name,
-    //   foundation: event.target.foundation,
-    //   shield: event.target.shield,
-    //   mascot: event.target.mascot,
-    //   localization: event.target.localization,
-    // };
-
-    api.createTime(newTime);
+    await api.createTime(newTime);
   }
 
   return (
     <div className="form">
-      <Form onSubmit={handleSubmit} className="form-inputs">
+      <form onSubmit={handleSubmit} className="form-inputs">
         <section>
           <span>Name:</span>
           <input
@@ -73,7 +65,7 @@ export function Form() {
         <button type="submit" className="btn-submit">
           Submit
         </button>
-      </Form>
+      </form>
     </div>
   );
 }

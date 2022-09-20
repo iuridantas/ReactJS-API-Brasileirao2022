@@ -1,28 +1,24 @@
 import './card.css';
 
-export function Card() {
+export function Card({ name, shield, foundation, mascot, localization }) {
   return (
     <div className="card-component">
-      <h2>Time Name</h2>
+      <h2>{name}</h2>
       <section className="card-infos">
-        <span className="card-span">Name:</span>
-        <h3>Name</h3>
+        <span className="card-span">Escudo:</span>
+        <h3>{shield}</h3>
       </section>
       <section className="card-infos">
-        <span className="card-span">Shield:</span>
-        <h3>Shield</h3>
+        <span className="card-span">Fundação:</span>
+        <h3>{foundation}</h3>
       </section>
       <section className="card-infos">
-        <span className="card-span">Foundation:</span>
-        <h3>Foundation</h3>
+        <span className="card-span">Mascote:</span>
+        <h3>{mascot}</h3>
       </section>
       <section className="card-infos">
-        <span className="card-span">Mascot:</span>
-        <h3>Mascot</h3>
-      </section>
-      <section className="card-infos">
-        <span className="card-span">Localization:</span>
-        <h3>Localization</h3>
+        <span className="card-span">Localização:</span>
+        <h3>{localization}</h3>
       </section>
     </div>
   );

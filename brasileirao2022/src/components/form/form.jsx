@@ -67,5 +67,5 @@ export function Form() {
         </button>
       </form>
     </div>
-  );
+  )
 }

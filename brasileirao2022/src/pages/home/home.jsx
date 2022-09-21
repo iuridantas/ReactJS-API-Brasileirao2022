@@ -128,7 +128,7 @@ export function Home() {
                   <input
                     type="number"
                     name="foundation"
-                    defaultValue={uniqueTime.shield}
+                    defaultValue={uniqueTime.foundation}
                   ></input>
                 </section>
                 <section>
@@ -136,7 +136,7 @@ export function Home() {
                   <input
                     type="text"
                     name="shield"
-                    defaultValue={uniqueTime.foundation}
+                    defaultValue={uniqueTime.shield}
                   ></input>
                 </section>
                 <section>

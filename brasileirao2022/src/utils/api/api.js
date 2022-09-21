@@ -15,5 +15,14 @@ export const api = {
     const response = await fetch(defaultUrl + '/characters');
     const allTimes = await response.json();
     return allTimes;
-  }
+  },
+
+  deleteTime: async (timeId) => {
+    const response = await fetch(defaultUrl + '/characters/delete/' + timeId, {
+      method: 'DELETE',
+      headers: new Headers({ 'Content-Type': 'application/json' }),
+    });
+    const timeDeleted = await response.json();
+    return timeDeleted;
+  },
 };

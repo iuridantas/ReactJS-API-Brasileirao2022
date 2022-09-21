@@ -1,15 +1,24 @@
 import { useState } from 'react';
 import { api } from '../../utils/api/api';
 
-export function Form() {
+export function Form({ getALL, handleModal }) {
   const [newTime, setNewTime] = useState();
+  const [loading, setLoading] = useState(false);
+
   async function handleSubmit(event) {
+    setLoading(true);
     event.preventDefault();
 
     await api.createTime(newTime);
+    await getALL();
+    setLoading(false);
+    handleModal();
   }
 
-  return (
+  return (<> 
+  {loading ? (
+    <div> loading...</div>
+  ) : (
     <div className="form">
       <form onSubmit={handleSubmit} className="form-inputs">
         <section>
@@ -67,5 +76,6 @@ export function Form() {
         </button>
       </form>
     </div>
-  )
+  )}
+  </>)
 }

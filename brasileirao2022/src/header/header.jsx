@@ -1,6 +1,7 @@
 import Modal from 'react-modal';
 import { useState } from 'react';
 import { AiOutlineFileAdd } from 'react-icons/ai';
+import { Form } from '../components/form/form';
 import './header.css';
 
 const customStyles = {
@@ -22,29 +23,37 @@ const customStyles = {
 
 Modal.setAppElement('#root');
 
-export function Header() {
+export function Header({getALL}) {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   function handleModal() {
     setModalIsOpen(!modalIsOpen);
   }
 
+
+
   return (
-    <div>
-      <header>
-        <section>
-          <img src="./liga.png" alt="logo" height='40' width='40'></img>
+    <>
+      <header className='header'>
+        <section className='header-section'>
+          <img src="./liga.png" alt="logo" height="40" width="40"></img>
+          <h2 className='name'>Brasileirão Série A 2022</h2>
         </section>
         <section>
-          <button onClick={handleModal}><AiOutlineFileAdd size={28}/>Add Time</button>
+          <button className='modal-button' onClick={handleModal}>
+            <AiOutlineFileAdd size={28} />
+            Add Time
+          </button>
         </section>
       </header>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={handleModal}
         style={customStyles}
-        contentLabel="Card Details"
-      ></Modal>
-    </div>
+        contentLabel="Form Create"
+      >
+        <Form getALL={getALL} handleModal={handleModal} />
+      </Modal>
+    </>
   );
 }

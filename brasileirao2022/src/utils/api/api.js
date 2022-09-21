@@ -25,4 +25,17 @@ export const api = {
     const timeDeleted = await response.json();
     return timeDeleted;
   },
+
+  updateTime: async (time) => {
+    const response = await fetch(
+      defaultUrl + '/characters/update/' + time._id,
+      {
+        method: 'PUT',
+        headers: new Headers({ 'Content-Type': 'application/json' }),
+        body: JSON.stringify(time),
+      },
+    );
+    const timeUpdated = await response.json();
+    return timeUpdated;
+  },
 };

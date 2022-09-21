@@ -52,10 +52,11 @@ export function Home() {
     setModalIsOpen(!modalIsOpen);
   }
 
-  function changeTime(event, timeId) {
+  function changeTime(event) {
     event.preventDefault();
 
-    const time = {
+    const updatedTime = {
+      _id: uniqueTime._id,
       name: event.target.name.value,
       shield: event.target.shield.value,
       foundation: event.target.foundation.value,
@@ -65,13 +66,14 @@ export function Home() {
 
     const newTimeList = timeList;
     newTimeList.map((item, index) => {
-      if (item._id === timeId) {
-        newTimeList.splice(index, 1, time);
+      if (item._id === updatedTime._id) {
+        newTimeList.splice(index, 1, updatedTime);
         setTimeList(newTimeList);
         handleModal();
       }
     });
     setEditTime(false);
+    api.updateTime(updatedTime);
   }
 
   useEffect(() => {
@@ -111,7 +113,6 @@ export function Home() {
       >
         {editTime ? (
           <>
-            (
             <div className="form">
               <form onSubmit={changeTime} className="form-inputs">
                 <section>
@@ -159,7 +160,6 @@ export function Home() {
                 </button>
               </form>
             </div>
-            )
           </>
         ) : (
           <>

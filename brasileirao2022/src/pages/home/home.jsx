@@ -172,18 +172,18 @@ export function Home() {
               </section>
               <h2>{uniqueTime.name}</h2>
               <img src={uniqueTime.shield} alt="escudo" height="100" width="100"></img>
-              <h3>{uniqueTime.foundation}</h3>
-              <h3>{uniqueTime.mascot}</h3>
-              <h3>{uniqueTime.localization}</h3>
+              <h3>Fundação: {uniqueTime.foundation}</h3>
+              <h3>Mascote: {uniqueTime.mascot}</h3>
+              <h3>Localização: {uniqueTime.localization}</h3>
             </section>
-            <button
+            <button className='btn-submit'
               onClick={() => {
                 setEditTime(true);
               }}
             >
               Edit
             </button>
-            <button
+            <button className='btn-submit'
               onClick={() => {
                 deleteTime(uniqueTime._id);
               }}

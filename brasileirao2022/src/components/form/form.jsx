@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { api } from '../../utils/api/api';
+import './form.css';
 
 export function Form({ getALL, handleModal }) {
   const [newTime, setNewTime] = useState();

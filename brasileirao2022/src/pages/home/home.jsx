@@ -1,5 +1,6 @@
 import { Card } from '../../components/card/card';
 import { Header } from '../../header/header';
+import { Footer } from '../../footer/footer';
 import './home.css';
 import { api } from '../../utils/api/api';
 import { useState, useEffect } from 'react';
@@ -163,14 +164,14 @@ export function Home() {
           </>
         ) : (
           <>
-            <section>
+            <section className='color'>
               <section className="display-button">
                 <button className="button" onClick={handleModal}>
                   <CgCloseR size={28} color="red" />
                 </button>
               </section>
               <h2>{uniqueTime.name}</h2>
-              <h3>{uniqueTime.shield}</h3>
+              <img src={uniqueTime.shield} alt="escudo" height="100" width="100"></img>
               <h3>{uniqueTime.foundation}</h3>
               <h3>{uniqueTime.mascot}</h3>
               <h3>{uniqueTime.localization}</h3>
@@ -192,6 +193,7 @@ export function Home() {
           </>
         )}
       </Modal>
+      {/* <Footer /> */}
     </section>
   );
 }

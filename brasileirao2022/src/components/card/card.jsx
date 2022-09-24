@@ -1,8 +1,8 @@
 import './card.css';
 
-export function Card({ name, shield, foundation, mascot, localization }) {
+export function Card({ name, shield, foundation, mascot, localization, color }) {
   return (
-    <div className="card-component">
+    <div className="card-component" style={{backgroundColor: color}}>
       <h2>{name}</h2>
       <section className="card-infos">
         <span></span>

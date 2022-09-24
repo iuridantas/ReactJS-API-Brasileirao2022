@@ -82,6 +82,7 @@ export function Home() {
   }, []);
 
   return (
+    <>
     <section className="home">
       <Header getALL={getTime} />
       <div className="card-list">
@@ -101,6 +102,7 @@ export function Home() {
                 foundation={item.foundation}
                 mascot={item.mascot}
                 localization={item.localization}
+                color={'red'}
               />
             </button>
           );
@@ -193,7 +195,8 @@ export function Home() {
           </>
         )}
       </Modal>
-      {/* <Footer /> */}
     </section>
+    <Footer />
+    </>
   );
 }

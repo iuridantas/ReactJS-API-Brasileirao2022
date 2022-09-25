@@ -102,7 +102,6 @@ export function Home() {
                 foundation={item.foundation}
                 mascot={item.mascot}
                 localization={item.localization}
-                color={'red'}
               />
             </button>
           );

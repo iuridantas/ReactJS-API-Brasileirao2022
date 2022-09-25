@@ -2,7 +2,7 @@ import './card.css';
 
 export function Card({ name, shield, foundation, mascot, localization, color }) {
   return (
-    <div className="card-component" style={{backgroundColor: color}}>
+    <div className="card-component">
       <h2>{name}</h2>
       <section className="card-infos">
         <span></span>

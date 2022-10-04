@@ -118,7 +118,7 @@ export function Home() {
             <div className="form">
               <form onSubmit={changeTime} className="form-inputs">
                 <section>
-                  <span>Name:</span>
+                  <span>Nome:</span>
                   <input
                     type="text"
                     name="name"
@@ -126,7 +126,7 @@ export function Home() {
                   ></input>
                 </section>
                 <section>
-                  <span>Foundation:</span>
+                  <span>Fundação:</span>
                   <input
                     type="number"
                     name="foundation"
@@ -134,7 +134,7 @@ export function Home() {
                   ></input>
                 </section>
                 <section>
-                  <span>Shield:</span>
+                  <span>Escudo:</span>
                   <input
                     type="text"
                     name="shield"
@@ -142,7 +142,7 @@ export function Home() {
                   ></input>
                 </section>
                 <section>
-                  <span>Mascot:</span>
+                  <span>Mascote:</span>
                   <input
                     type="text"
                     name="mascot"
@@ -150,7 +150,7 @@ export function Home() {
                   ></input>
                 </section>
                 <section>
-                  <span>Localization:</span>
+                  <span>Localização:</span>
                   <input
                     type="text"
                     name="localization"

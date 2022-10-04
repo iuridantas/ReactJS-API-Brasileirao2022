@@ -42,7 +42,7 @@ export function Header({getALL}) {
         <section>
           <button className='modal-button' onClick={handleModal}>
             <AiOutlineFileAdd size={28} />
-            Add Time
+            Adicionar time
           </button>
         </section>
       </header>

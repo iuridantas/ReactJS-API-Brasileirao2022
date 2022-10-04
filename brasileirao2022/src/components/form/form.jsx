@@ -23,7 +23,7 @@ export function Form({ getALL, handleModal }) {
     <div className="form">
       <form onSubmit={handleSubmit} className="form-inputs">
         <section>
-          <span>Name:</span>
+          <span>Nome:</span>
           <input
             type="text"
             name="name"
@@ -33,7 +33,7 @@ export function Form({ getALL, handleModal }) {
           ></input>
         </section>
         <section>
-          <span>Foundation:</span>
+          <span>Fundação:</span>
           <input
             type="number"
             name="foundation"
@@ -43,7 +43,7 @@ export function Form({ getALL, handleModal }) {
           ></input>
         </section>
         <section>
-          <span>Shield:</span>
+          <span>Escudo:</span>
           <input
             type="text"
             name="shield"
@@ -53,7 +53,7 @@ export function Form({ getALL, handleModal }) {
           ></input>
         </section>
         <section>
-          <span>Mascot:</span>
+          <span>Mascote:</span>
           <input
             type="text"
             name="mascot"
@@ -63,7 +63,7 @@ export function Form({ getALL, handleModal }) {
           ></input>
         </section>
         <section>
-          <span>Localization:</span>
+          <span>Localização:</span>
           <input
             type="text"
             name="localization"

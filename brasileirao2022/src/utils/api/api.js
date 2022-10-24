@@ -2,7 +2,7 @@ const defaultUrl = 'https://api-teamsbrazilian2022.herokuapp.com';
 
 export const api = {
   createTime: async (time) => {
-    const response = await fetch(defaultUrl + '/characters/create', {
+    const response = await fetch(defaultUrl + '/seriea/create', {
       method: 'POST',
       headers: new Headers({ 'Content-Type': 'application/json' }),
       body: JSON.stringify(time),
@@ -12,13 +12,13 @@ export const api = {
   },
 
   getAllTimes: async () => {
-    const response = await fetch(defaultUrl + '/characters');
+    const response = await fetch(defaultUrl + '/seriea');
     const allTimes = await response.json();
     return allTimes;
   },
 
   deleteTime: async (timeId) => {
-    const response = await fetch(defaultUrl + '/characters/delete/' + timeId, {
+    const response = await fetch(defaultUrl + '/seriea/delete/' + timeId, {
       method: 'DELETE',
       headers: new Headers({ 'Content-Type': 'application/json' }),
     });
@@ -28,7 +28,7 @@ export const api = {
 
   updateTime: async (time) => {
     const response = await fetch(
-      defaultUrl + '/characters/update/' + time._id,
+      defaultUrl + '/seriea/update/' + time._id,
       {
         method: 'PUT',
         headers: new Headers({ 'Content-Type': 'application/json' }),
